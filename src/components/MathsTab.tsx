@@ -3,7 +3,9 @@ import { AdditionsForm } from "./maths/basic/AdditionsForm";
 import { SubstractionsForm } from "./maths/basic/SubstractionsFrom";
 import { MultiplicationsForm } from "./maths/basic/MultiplicationsForm";
 import { DivisionsForm } from "./maths/basic/DivisionsForm";
-import { FrAdditionsForm } from "./maths/fractions/FrAdditionFrom";
+import { FrAdditionsForm } from "./maths/fractions/FrAdditionsForm";
+import { FrSubstractionsForm } from "./maths/fractions/FrSubstractionsForm";
+import { FrMultiplicationsForm } from "./maths/fractions/FrMultiplicationsForm";
 
 const basicMathsItems: CollapseProps["items"] = [
   {
@@ -37,12 +39,12 @@ const fractionsItems: CollapseProps["items"] = [
   {
     key: "2",
     label: "Restas",
-    children: <SubstractionsForm />,
+    children: <FrSubstractionsForm />,
   },
   {
     key: "3",
     label: "Multiplicaciones",
-    children: <MultiplicationsForm />,
+    children: <FrMultiplicationsForm />,
   },
 ];
 
