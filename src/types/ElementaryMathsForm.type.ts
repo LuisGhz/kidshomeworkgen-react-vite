@@ -10,3 +10,16 @@ export type Substractions = {
   minuendDigits: number;
   subtrahendDigits: number;
 };
+
+export type Multiplications = {
+  pages: number;
+  multiplicandDitis: number;
+  multiplierDigits: number;
+};
+
+export type Divisions = {
+  pages: number;
+  dividendDigits: number;
+  divisorDigits: number;
+  canHaveRemainder: boolean;
+};
