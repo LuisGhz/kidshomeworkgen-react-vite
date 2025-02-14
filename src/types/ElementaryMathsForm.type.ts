@@ -4,3 +4,9 @@ export type Additions = {
   secondAddendDigits: number;
   includeDecimals: boolean;
 };
+
+export type Substractions = {
+  pages: number;
+  minuendDigits: number;
+  subtrahendDigits: number;
+};
