@@ -12,7 +12,7 @@ export const SubstractionsForm = () => {
   return (
     <>
       <Form
-        name="elementary-additions"
+        name="elementary-substractions"
         initialValues={{
           pages: 1,
           minuendDigits: 5,
