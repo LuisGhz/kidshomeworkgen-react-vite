@@ -1,6 +1,8 @@
 import { Divider } from "antd";
 import { AdditionsForm } from "./elementary/AdditionsForm";
 import { SubstractionsForm } from "./elementary/SubstractionsFrom";
+import { MultiplicationsForm } from "./elementary/MultiplicationsForm";
+import { DivisionsForm } from "./elementary/DivisionsForm";
 
 export const ElementaryMathsTab = () => {
   return (
@@ -16,19 +18,10 @@ export const ElementaryMathsTab = () => {
       <SubstractionsForm />
       <Divider />
       <h3>Multiplicaciones</h3>
-      {/* 
-        pages int
-        minFactorValue int
-        maxFactorValue int
-        isWithDecimal boolean
-      */}
+      <MultiplicationsForm />
       <Divider />
       <h3>Divisiones</h3>
-      {/* 
-        pages int
-        minNumber int
-        isWithDecimal boolean
-       */}
+      <DivisionsForm />
       <Divider />
     </div>
   );
