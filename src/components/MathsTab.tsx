@@ -39,7 +39,7 @@ const mathsItems: CollapseProps["items"] = [
   },
 ];
 
-export const ElementaryMathsTab = () => {
+export const MathsTab = () => {
   return (
     <div>
       <h1>Matematicas</h1>

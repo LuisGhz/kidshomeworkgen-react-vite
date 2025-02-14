@@ -1,13 +1,13 @@
 import { Tabs } from "antd";
 import type { TabsProps } from "antd";
 import "./App.css";
-import { ElementaryMathsTab } from "./components/ElementaryMathsTab";
+import { MathsTab } from "./components/MathsTab";
 
 const items: TabsProps["items"] = [
   {
     key: "1",
     label: "Matematicas",
-    children: <ElementaryMathsTab />,
+    children: <MathsTab />,
   },
 ];
 
