@@ -1,7 +1,7 @@
 import { Form, InputNumber, Button } from "antd";
-import { getPdfFile } from "../../services/PdfFile.service";
-import type { Substractions } from "../../types/ElementaryMathsForm.type";
-import { buildQueryString } from "../../utils/buildQueryString.util";
+import { getPdfFile } from "../../../services/PdfFile.service";
+import type { Substractions } from "../../../types/maths/ElementaryMathsForm.type";
+import { buildQueryString } from "../../../utils/buildQueryString.util";
 
 export const SubstractionsForm = () => {
   const onFinish = async (values: Substractions) => {

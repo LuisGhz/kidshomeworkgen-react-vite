@@ -1,8 +1,8 @@
 import { Collapse, CollapseProps, Divider } from "antd";
-import { AdditionsForm } from "./elementary/AdditionsForm";
-import { SubstractionsForm } from "./elementary/SubstractionsFrom";
-import { MultiplicationsForm } from "./elementary/MultiplicationsForm";
-import { DivisionsForm } from "./elementary/DivisionsForm";
+import { AdditionsForm } from "./maths/basic/AdditionsForm";
+import { SubstractionsForm } from "./maths/basic/SubstractionsFrom";
+import { MultiplicationsForm } from "./maths/basic/MultiplicationsForm";
+import { DivisionsForm } from "./maths/basic/DivisionsForm";
 import { FrAdditionsForm } from "./maths/fractions/FrAdditionFrom";
 
 const basicMathsItems: CollapseProps["items"] = [
