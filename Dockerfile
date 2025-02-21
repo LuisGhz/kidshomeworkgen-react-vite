@@ -1,4 +1,5 @@
 FROM node:20.18-alpine AS builder
+ARG BASE_URL
 WORKDIR /app
 COPY package.json ./
 COPY pnpm-lock.yaml ./
@@ -8,7 +9,11 @@ COPY . .
 # Establece la variable de entorno para el build
 ARG VITE_API_URL
 ENV VITE_API_URL=${VITE_API_URL}
-RUN pnpm build
+RUN if [ -z "$BASE_URL" ]; then \
+    pnpm build; \
+  else \
+    pnpm build --base="$BASE_URL"; \
+  fi
 
 FROM nginx:alpine
 COPY --from=builder /app/dist /usr/share/nginx/html

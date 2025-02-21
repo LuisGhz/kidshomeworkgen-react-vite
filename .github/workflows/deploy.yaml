@@ -26,6 +26,7 @@ jobs:
         with:
           build-args: |
             VITE_API_URL=${{ secrets.VITE_API_URL }}
+            BASE_URL=${{ vars.BASE_URL }}
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/personalwebapss:kidshomeworkgen-react-vite
 
