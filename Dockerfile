@@ -9,11 +9,7 @@ COPY . .
 # Establece la variable de entorno para el build
 ARG VITE_API_URL
 ENV VITE_API_URL=${VITE_API_URL}
-RUN if [ -z "$BASE_URL" ]; then \
-    pnpm build; \
-  else \
-    pnpm build --base="$BASE_URL"; \
-  fi
+RUN pnpm build;
 
 FROM nginx:alpine
 COPY --from=builder /app/dist /usr/share/nginx/html
