@@ -25,7 +25,7 @@ export const FrMultiplicationsForm = () => {
           <InputNumber />
         </Form.Item>
         <Form.Item<FrMultiplications>
-          label="Incluir decimales"
+          label="Incluir fracciones impropias (Con enteros)"
           name="canHaveWholes"
           valuePropName="checked"
         >
