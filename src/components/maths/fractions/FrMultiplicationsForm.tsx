@@ -1,13 +1,13 @@
 import { Form, InputNumber, Checkbox, Button } from "antd";
-import { getPdfFile } from "../../../services/PdfFile.service";
 import type { FrMultiplications } from "../../../types/maths/FractionsForm.type";
-import { buildQueryString } from "../../../utils/buildQueryString.util";
 import { DenominatorsSelect } from "../../inputs/DenominatorsSelect";
+import { useFractions } from "../../../hooks/maths/useFractions";
 
 export const FrMultiplicationsForm = () => {
+  const { multiplications } = useFractions();
+
   const onFinish = async (values: FrMultiplications) => {
-    const query = buildQueryString("/fractions/multiplications", values);
-    await getPdfFile(query);
+    await multiplications(values);
   };
 
   return (
