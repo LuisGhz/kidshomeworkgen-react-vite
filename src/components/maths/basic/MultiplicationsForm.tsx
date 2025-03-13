@@ -1,12 +1,12 @@
 import { Form, InputNumber, Button } from "antd";
-import { getPdfFile } from "../../../services/PdfFile.service";
 import type { Multiplications } from "../../../types/maths/ElementaryMathsForm.type";
-import { buildQueryString } from "../../../utils/buildQueryString.util";
+import { useBasics } from "../../../hooks/maths/useBasics";
 
 export const MultiplicationsForm = () => {
+  const { multiplications } = useBasics();
+
   const onFinish = async (values: Multiplications) => {
-    const query = buildQueryString("/basic-maths/multiplications", values);
-    await getPdfFile(query);
+    await multiplications(values);
   };
 
   return (

@@ -1,12 +1,12 @@
 import { Form, InputNumber, Button, Checkbox } from "antd";
-import { getPdfFile } from "../../../services/PdfFile.service";
 import type { Divisions } from "../../../types/maths/ElementaryMathsForm.type";
-import { buildQueryString } from "../../../utils/buildQueryString.util";
+import { useBasics } from "../../../hooks/maths/useBasics";
 
 export const DivisionsForm = () => {
+  const { divisions } = useBasics();
+
   const onFinish = async (values: Divisions) => {
-    const query = buildQueryString("/basic-maths/divisions", values);
-    await getPdfFile(query);
+    await divisions(values);
   };
 
   return (

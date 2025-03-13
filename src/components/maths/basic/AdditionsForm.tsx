@@ -1,12 +1,12 @@
 import { Form, InputNumber, Checkbox, Button } from "antd";
-import { getPdfFile } from "../../../services/PdfFile.service";
 import type { Additions } from "../../../types/maths/ElementaryMathsForm.type";
-import { buildQueryString } from "../../../utils/buildQueryString.util";
+import { useBasics } from "../../../hooks/maths/useBasics";
 
 export const AdditionsForm = () => {
+  const { additions } = useBasics();
+
   const onFinish = async (values: Additions) => {
-    const query = buildQueryString("/basic-maths/additions", values);
-    await getPdfFile(query);
+    await additions(values);
   };
 
   return (

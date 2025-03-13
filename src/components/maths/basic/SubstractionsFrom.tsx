@@ -1,12 +1,12 @@
 import { Form, InputNumber, Button } from "antd";
-import { getPdfFile } from "../../../services/PdfFile.service";
 import type { Substractions } from "../../../types/maths/ElementaryMathsForm.type";
-import { buildQueryString } from "../../../utils/buildQueryString.util";
+import { useBasics } from "../../../hooks/maths/useBasics";
 
 export const SubstractionsForm = () => {
+  const { substractions } = useBasics();
+
   const onFinish = async (values: Substractions) => {
-    const query = buildQueryString("/basic-maths/substractions", values);
-    await getPdfFile(query);
+    await substractions(values);
   };
 
   return (
