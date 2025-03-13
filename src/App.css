@@ -1,3 +1,11 @@
 .App {
   padding: 1rem;
+  position: relative;
+}
+
+.loader-container {
+  position: absolute;
+  z-index: 100;
+  left: 47%;
+  top: 50%;
 }
