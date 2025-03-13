@@ -1,7 +1,7 @@
 import { Form, InputNumber, Checkbox, Button } from "antd";
-import type { FrAdditions } from "../../../types/maths/FractionsForm.type";
-import { DenominatorsSelect } from "../../inputs/DenominatorsSelect";
-import { useFractions } from "../../../hooks/maths/useFractions";
+import type { FrAdditions } from "types/maths/FractionsForm.type";
+import { DenominatorsSelect } from "components/inputs/DenominatorsSelect";
+import { useFractions } from "hooks/maths/useFractions";
 
 export const FrAdditionsForm = () => {
   const { additions } = useFractions();

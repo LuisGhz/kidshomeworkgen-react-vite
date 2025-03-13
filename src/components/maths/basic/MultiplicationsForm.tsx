@@ -1,6 +1,6 @@
 import { Form, InputNumber, Button } from "antd";
-import type { Multiplications } from "../../../types/maths/ElementaryMathsForm.type";
-import { useBasics } from "../../../hooks/maths/useBasics";
+import type { Multiplications } from "types/maths/ElementaryMathsForm.type";
+import { useBasics } from "hooks/maths/useBasics";
 
 export const MultiplicationsForm = () => {
   const { multiplications } = useBasics();

@@ -1,6 +1,6 @@
 import { Form, InputNumber, Button, Checkbox } from "antd";
-import type { Divisions } from "../../../types/maths/ElementaryMathsForm.type";
-import { useBasics } from "../../../hooks/maths/useBasics";
+import type { Divisions } from "types/maths/ElementaryMathsForm.type";
+import { useBasics } from "hooks/maths/useBasics";
 
 export const DivisionsForm = () => {
   const { divisions } = useBasics();

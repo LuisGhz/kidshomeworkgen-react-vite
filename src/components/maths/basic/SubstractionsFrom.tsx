@@ -1,6 +1,6 @@
 import { Form, InputNumber, Button } from "antd";
-import type { Substractions } from "../../../types/maths/ElementaryMathsForm.type";
-import { useBasics } from "../../../hooks/maths/useBasics";
+import type { Substractions } from "types/maths/ElementaryMathsForm.type";
+import { useBasics } from "hooks/maths/useBasics";
 
 export const SubstractionsForm = () => {
   const { substractions } = useBasics();

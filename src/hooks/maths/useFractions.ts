@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { getPdfFile } from "../../services/PdfFile.service";
+import { getPdfFile } from "services/PdfFile.service";
 import {
   FrAdditions,
   FrMultiplications,
   FrSubstractions,
-} from "../../types/maths/FractionsForm.type";
-import { buildQueryString } from "../../utils/buildQueryString.util";
-import { AppContext } from "../../context/AppContext";
+} from "types/maths/FractionsForm.type";
+import { buildQueryString } from "utils/buildQueryString.util";
+import { AppContext } from "context/AppContext";
 
 export const useFractions = () => {
   const { loading, loaded } = useContext(AppContext);

@@ -1,13 +1,13 @@
 import { useContext } from "react";
-import { getPdfFile } from "../../services/PdfFile.service";
+import { getPdfFile } from "services/PdfFile.service";
 import {
   Additions,
   Divisions,
   Multiplications,
   Substractions,
-} from "../../types/maths/ElementaryMathsForm.type";
-import { buildQueryString } from "../../utils/buildQueryString.util";
-import { AppContext } from "../../context/AppContext";
+} from "types/maths/ElementaryMathsForm.type";
+import { buildQueryString } from "utils/buildQueryString.util";
+import { AppContext } from "context/AppContext";
 
 export const useBasics = () => {
   const { loading, loaded } = useContext(AppContext);
