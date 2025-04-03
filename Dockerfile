@@ -1,5 +1,4 @@
 FROM node:20.18-alpine AS builder
-ARG BASE_URL
 WORKDIR /app
 COPY package.json ./
 COPY pnpm-lock.yaml ./
