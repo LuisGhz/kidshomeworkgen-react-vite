@@ -1,8 +1,11 @@
 import { Form, InputNumber, Button, Checkbox } from "antd";
 import type { Divisions } from "types/maths/ElementaryMathsForm.type";
 import { useBasics } from "hooks/maths/useBasics";
+import { useContext } from "react";
+import { AppContext } from "context/AppContext";
 
 export const DivisionsForm = () => {
+  const { isLoading } = useContext(AppContext);
   const { divisions } = useBasics();
 
   const onFinish = async (values: Divisions) => {
@@ -44,7 +47,7 @@ export const DivisionsForm = () => {
           <Checkbox />
         </Form.Item>
         <Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" disabled={isLoading}>
             Generar
           </Button>
         </Form.Item>

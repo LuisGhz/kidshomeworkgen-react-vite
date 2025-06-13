@@ -2,8 +2,11 @@ import { Form, InputNumber, Checkbox, Button } from "antd";
 import type { FrSubstractions } from "types/maths/FractionsForm.type";
 import { DenominatorsSelect } from "components/inputs/DenominatorsSelect";
 import { useFractions } from "hooks/maths/useFractions";
+import { AppContext } from "context/AppContext";
+import { useContext } from "react";
 
 export const FrSubstractionsForm = () => {
+  const { isLoading } = useContext(AppContext);
   const { substractions } = useFractions();
 
   const onFinish = async (values: FrSubstractions) => {
@@ -33,7 +36,7 @@ export const FrSubstractionsForm = () => {
         </Form.Item>
         <DenominatorsSelect />
         <Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" disabled={isLoading}>
             Generar
           </Button>
         </Form.Item>

@@ -1,8 +1,11 @@
 import { Form, InputNumber, Button } from "antd";
 import type { Substractions } from "types/maths/ElementaryMathsForm.type";
 import { useBasics } from "hooks/maths/useBasics";
+import { AppContext } from "context/AppContext";
+import { useContext } from "react";
 
 export const SubstractionsForm = () => {
+  const { isLoading } = useContext(AppContext);
   const { substractions } = useBasics();
 
   const onFinish = async (values: Substractions) => {
@@ -36,7 +39,7 @@ export const SubstractionsForm = () => {
           <InputNumber min={1} max={5} />
         </Form.Item>
         <Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" disabled={isLoading}>
             Generar
           </Button>
         </Form.Item>
