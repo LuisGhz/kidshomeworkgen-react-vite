@@ -22,7 +22,7 @@ export const FrMultiplicationsForm = () => {
         onFinish={onFinish}
       >
         <Form.Item<FrMultiplications> label="Páginas" name="pages">
-          <InputNumber />
+          <InputNumber min={1} max={4} />
         </Form.Item>
         <Form.Item<FrMultiplications>
           label="Incluir fracciones impropias (Con enteros)"

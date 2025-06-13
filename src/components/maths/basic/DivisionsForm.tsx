@@ -22,19 +22,19 @@ export const DivisionsForm = () => {
         onFinish={onFinish}
       >
         <Form.Item<Divisions> label="Páginas" name="pages">
-          <InputNumber />
+          <InputNumber min={1} max={4} />
         </Form.Item>
         <Form.Item<Divisions>
           label="Digitos para el dividendo"
           name="dividendDigits"
         >
-          <InputNumber />
+          <InputNumber min={1} max={5} />
         </Form.Item>
         <Form.Item<Divisions>
           label="Digitos para el divisor"
           name="divisorDigits"
         >
-          <InputNumber />
+          <InputNumber min={1} max={3} />
         </Form.Item>
         <Form.Item<Divisions>
           label="Incluir decimales"

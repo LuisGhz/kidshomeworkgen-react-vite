@@ -13,7 +13,7 @@ export type Substractions = {
 
 export type Multiplications = {
   pages: number;
-  multiplicandDitis: number;
+  multiplicandDigits: number;
   multiplierDigits: number;
 };
 

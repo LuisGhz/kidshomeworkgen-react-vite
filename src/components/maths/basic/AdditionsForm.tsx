@@ -1,4 +1,4 @@
-import { Form, InputNumber, Checkbox, Button } from "antd";
+import { Form, InputNumber, Button } from "antd";
 import type { Additions } from "types/maths/ElementaryMathsForm.type";
 import { useBasics } from "hooks/maths/useBasics";
 
@@ -22,26 +22,19 @@ export const AdditionsForm = () => {
         onFinish={onFinish}
       >
         <Form.Item<Additions> label="Páginas" name="pages">
-          <InputNumber />
+          <InputNumber min={1} max={4} />
         </Form.Item>
         <Form.Item<Additions>
           label="Digitos para el primer numero"
           name="firstAddendDigits"
         >
-          <InputNumber />
+          <InputNumber min={1} max={5} />
         </Form.Item>
         <Form.Item<Additions>
           label="Digitos para el segundo numero"
           name="secondAddendDigits"
         >
-          <InputNumber />
-        </Form.Item>
-        <Form.Item<Additions>
-          label="Incluir decimales"
-          name="includeDecimals"
-          valuePropName="checked"
-        >
-          <Checkbox />
+          <InputNumber min={1} max={5} />
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit">

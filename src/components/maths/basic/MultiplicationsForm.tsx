@@ -15,25 +15,25 @@ export const MultiplicationsForm = () => {
         name="elementary-multiplications"
         initialValues={{
           pages: 1,
-          multiplicandDitis: 5,
+          multiplicandDigits: 5,
           multiplierDigits: 5,
         }}
         onFinish={onFinish}
       >
         <Form.Item<Multiplications> label="Páginas" name="pages">
-          <InputNumber />
+          <InputNumber min={1} max={4} />
         </Form.Item>
         <Form.Item<Multiplications>
           label="Digitos para el multiplicando"
-          name="multiplicandDitis"
+          name="multiplicandDigits"
         >
-          <InputNumber />
+          <InputNumber min={1} max={5} />
         </Form.Item>
         <Form.Item<Multiplications>
           label="Digitos para el multiplicador"
           name="multiplierDigits"
         >
-          <InputNumber />
+          <InputNumber min={1} max={3} />
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit">
