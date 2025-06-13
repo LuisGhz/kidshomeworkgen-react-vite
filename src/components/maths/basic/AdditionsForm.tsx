@@ -22,7 +22,7 @@ export const AdditionsForm = () => {
         onFinish={onFinish}
       >
         <Form.Item<Additions> label="Páginas" name="pages">
-          <InputNumber min={1} max={4} />
+          <InputNumber min={1} max={2} />
         </Form.Item>
         <Form.Item<Additions>
           label="Digitos para el primer numero"

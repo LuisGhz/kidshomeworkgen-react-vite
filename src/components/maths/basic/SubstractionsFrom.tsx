@@ -21,7 +21,7 @@ export const SubstractionsForm = () => {
         onFinish={onFinish}
       >
         <Form.Item<Substractions> label="Páginas" name="pages">
-          <InputNumber min={1} max={4} />
+          <InputNumber min={1} max={2} />
         </Form.Item>
         <Form.Item<Substractions>
           label="Digitos para el minuendo"

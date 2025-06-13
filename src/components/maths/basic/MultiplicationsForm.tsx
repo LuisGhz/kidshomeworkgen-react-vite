@@ -21,7 +21,7 @@ export const MultiplicationsForm = () => {
         onFinish={onFinish}
       >
         <Form.Item<Multiplications> label="Páginas" name="pages">
-          <InputNumber min={1} max={4} />
+          <InputNumber min={1} max={2} />
         </Form.Item>
         <Form.Item<Multiplications>
           label="Digitos para el multiplicando"

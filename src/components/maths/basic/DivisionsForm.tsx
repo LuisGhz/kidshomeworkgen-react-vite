@@ -22,7 +22,7 @@ export const DivisionsForm = () => {
         onFinish={onFinish}
       >
         <Form.Item<Divisions> label="Páginas" name="pages">
-          <InputNumber min={1} max={4} />
+          <InputNumber min={1} max={2} />
         </Form.Item>
         <Form.Item<Divisions>
           label="Digitos para el dividendo"
