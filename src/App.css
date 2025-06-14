@@ -4,8 +4,16 @@
 }
 
 .loader-container {
-  position: absolute;
   z-index: 100;
-  left: 47%;
-  top: 50%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
 }
