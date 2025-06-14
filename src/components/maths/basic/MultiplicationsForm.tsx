@@ -19,7 +19,7 @@ export const MultiplicationsForm = () => {
         initialValues={{
           pages: 1,
           multiplicandDigits: 5,
-          multiplierDigits: 5,
+          multiplierDigits: 3,
         }}
         onFinish={onFinish}
       >
